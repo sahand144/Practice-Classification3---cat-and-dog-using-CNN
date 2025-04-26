@@ -16,8 +16,8 @@ import random
 from PIL import Image
 
 # Setting the path
-train_path = r"D:\datasets\New To Work on 3\Cats and Dogs\train"
-val_path = r"D:\datasets\New To Work on 3\Cats and Dogs\val"
+train_path = r".\train"
+val_path = r".\val"
 
 # Function to show random images from the train and val set
 def show_random_image():
