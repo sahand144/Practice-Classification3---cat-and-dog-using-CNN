@@ -131,6 +131,8 @@ model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
 early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 
 # Calculate steps
+# steps_per_epoch = total_train_samples // batch_size
+# validation_steps = total_val_samples // batch_size
 steps_per_epoch = (train_generator.n + train_generator.batch_size - 1) // train_generator.batch_size  # 275 // 32 = 9
 validation_steps = (val_generator.n + val_generator.batch_size - 1) // val_generator.batch_size  # 70 // 32 = 3
 
